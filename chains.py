@@ -11,3 +11,8 @@ process_raw_chain = LLMChain(
         prompts.PROCESS_RAW_TEXT_PROMPT,
     ),
 )
+
+generate_tasks_chain = LLMChain(
+    llm=gptTurbo,
+    prompt=PromptTemplate.from_template(prompts.GENERATE_SPECIFIC_TASKS_PROMPT),
+)
